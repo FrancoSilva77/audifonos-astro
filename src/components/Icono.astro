@@ -1,0 +1,42 @@
+---
+const { imagen, titulo, descripcion } = Astro.props;
+---
+
+<div class="icono">
+  <img
+    src={imagen}
+    alt="Imagen Icono"
+  />
+  <h3>{titulo}</h3>
+  <p>{descripcion}</p>
+</div>
+
+<style>
+  .icono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: calc(var(--separacion) / 2);
+  }
+
+  .icono:last-of-type {
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .icono {
+      margin: 0;
+    }
+  }
+
+  .icono img {
+    width: 10rem;
+  }
+
+  .icono h3 {
+    color: var(--primario);
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: calc(var(--separacion) / 2);
+  }
+</style>

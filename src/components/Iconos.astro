@@ -1,0 +1,38 @@
+---
+import Icono from './Icono.astro';
+---
+
+<section class="contenedor">
+  <div class="iconos">
+    <Icono
+      imagen="/img/icono-sonido.svg"
+      titulo="Gran Sonido"
+      descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, accusamus non repellat possimus blanditiis omnis asperiores consequatur at molestias nisi"
+    />
+    <Icono
+      imagen="/img/icono-garantia.svg"
+      titulo="Garantía de por vida"
+      descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, accusamus non repellat possimus blanditiis omnis asperiores consequatur at molestias nisi"
+    />
+    <Icono
+      imagen="/img/icono-bateria.svg"
+      titulo="+20 Horas de Bateria"
+      descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, accusamus non repellat possimus blanditiis omnis asperiores consequatur at molestias nisi"
+    />
+  </div>
+</section>
+
+<style>
+  .iconos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+    padding: var(--separacion) 0;
+  }
+
+  @media (min-width: 768px) {
+    .iconos {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
